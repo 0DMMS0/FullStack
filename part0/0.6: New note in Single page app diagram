@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+   note and save
+
+    Note right of browser js added the note
+    browser->>server: POST /new_note_spa (JSON)
+    activate server
+    server-->>browser: 201 Created
+    deactivate server
+
+   save without updating the page
